@@ -4,6 +4,7 @@
         "address": {
             "companyVatPlaceholder": "Enter VAT Reg.No....",
             "companyVatRequired":"VAT Reg.No. must be entered in the appropriate format, e.g: PLXXXXXXXXXX."
-        }
+        },
+        "vies-check-failed": "The VAT Reg.No. you entered is not valid"
     }
 }

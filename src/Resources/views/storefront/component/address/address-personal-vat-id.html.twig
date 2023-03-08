@@ -15,6 +15,7 @@
                name="vatIds[]"
                data-form-validation-vat-valid="true"
                data-form-validation-vat-valid-message="{{ "pluginVatValidation.address.companyVatRequired"|trans|striptags }}"
+               data-form-validation-vies-check-failed-message="{{ "pluginVatValidation.vies-check-failed"|trans|striptags }}"
                 {% if config('PluginVatValidation.config.isVatRegNoRequired') %}
                     required="required"
                 {% endif %}
