@@ -1,6 +1,6 @@
 import {checkVAT, countries} from "jsvat";
 import Plugin from "src/plugin-system/plugin.class";
-import StoreApiClient from "src/service/store-api-client.service";
+import HttpClient from 'src/service/http-client.service';
 import ElementLoadingIndicatorUtil from "src/utility/loading-indicator/element-loading-indicator.util";
 import {titleCase} from "./helper/typography.helper";
 import DomAccess from "src/helper/dom-access.helper";
@@ -15,7 +15,7 @@ export default class AccountProfileVatValidationLoaderDataPlugin extends Plugin 
     };
 
     init() {
-        this._client = new StoreApiClient();
+        this._client = new HttpClient();
         this.$companyVatId = DomAccess.querySelector(this.el, this.options.companyVatIdSelector);
         this.$companyName = DomAccess.querySelector(this.el, this.options.companyNameSelector);
 
