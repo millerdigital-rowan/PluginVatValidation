@@ -19,7 +19,7 @@
                 {% if config('PluginVatValidation.config.isVatRegNoRequired') %}
                     required="required"
                 {% endif %}
-               value="{{ activeRoute == 'frontend.account.profile.page' or (feature('FEATURE_NEXT_15957') and activeRoute == 'frontend.account.addressbook' and context.customer.guest) ? vatIds[0] : vatIds.get(0) }}">
+               value="{{ activeRoute == 'frontend.account.profile.page' or (activeRoute == 'frontend.account.addressbook' and context.customer.guest) ? vatIds[0] : vatIds.get(0) }}">
     </div>
 
     <small data-form-validation-vat-valid-text="true" class="form-text vat-tip js-validation-message">
