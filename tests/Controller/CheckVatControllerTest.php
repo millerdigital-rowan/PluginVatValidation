@@ -38,7 +38,7 @@ class CheckVatControllerTest extends TestCase
         $this->browser
             ->request(
                 'GET',
-                '/store-api/company/' . Uuid::randomHex(),
+                '/vat-check/' . Uuid::randomHex(),
             );
 
         static::assertIsString($this->browser->getResponse()->getContent());
@@ -53,7 +53,7 @@ class CheckVatControllerTest extends TestCase
         $this->browser
             ->request(
                 'GET',
-                '/store-api/company/' . 'PL5252546391',
+                '/vat-check/' . 'PL5252546391',
             );
 
         static::assertIsString($this->browser->getResponse()->getContent());

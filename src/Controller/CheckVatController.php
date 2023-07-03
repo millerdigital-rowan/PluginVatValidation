@@ -62,7 +62,7 @@ class CheckVatController extends AbstractController
      *         )
      *     )
      * )
-     * @Route("/store-api/company/{vatId}", name="store-api.vat-validation", options={"seo"="false"}, methods={"GET"}, defaults={"_routeScope"={"store-api"}})
+     * @Route("/vat-check/{vatId}", name="frontend.vat-check.vat-validation", options={"seo"="false"}, methods={"GET"}, defaults={"_routeScope"={"storefront"}, "XmlHttpRequest"=true})
      */
     public function checkVat(string $vatId): VatValidationResponse
     {

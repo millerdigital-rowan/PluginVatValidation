@@ -41,7 +41,7 @@ export default class AccountProfileVatValidationLoaderDataPlugin extends Plugin 
         ElementLoadingIndicatorUtil.create(this.$companyVatId.parentNode);
 
         return new Promise((resolve, reject) => {
-            this._client.get(`store-api/company/${vatId}`, (response, request) => {
+            this._client.get(`/vat-check/${vatId}`, (response, request) => {
                 ElementLoadingIndicatorUtil.remove(this.$companyVatId.parentNode);
 
                 if (request.status >= 400) {
